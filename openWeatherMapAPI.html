@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- bootstrap cdn  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <style>
+        body{
+            background: url(pexels-johannes-plenio-1118873.jpg) no-repeat;
+            background-size: 100vw 100vh;
+        }
+        
+
+        .form-control:focus {
+            color: #fff;
+            font-weight: 600;
+            font-size: 30px;
+            background-color: #fff;
+            border-color: #86b7fe;
+            outline: 0;
+            box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+        }
+    </style>
+
+    <title>Open Weather Map API</title>
+</head>
+<body>
+
+    <main>
+
+        <!-- search section start  -->
+        <section id="search_section" class="container w-50 text-center mx-auto">
+            
+            <h1 class="text-white my-5">Search Weather Here</h1>
+
+            <!-- form field start -->
+            <div class="input-group mb-3">
+                <input id="input_field" type="text" class="form-control shadow-none bg-transparent fs-3" placeholder="City name" aria-label="City name" aria-describedby="button-addon2">
+                <button onclick="searchWeatherData()" class="btn btn-outline-secondary" type="button" id="button-addon2"> <i class="fab fa-2x fa-searchengin"></i> </button>
+            </div>
+            <!-- form field end -->
+
+            <!-- spinner start  -->
+            <div id="preloader" style="display: none;" class="text-center">
+                <div  class="spinner-border" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+
+            <!-- search error  -->
+            <div id="search_error" style="display: none;">
+                <h1 class="text-danger">Write something to search</h1>
+            </div>
+        </section>
+        <!-- search section end  -->
+
+        <!-- result section start  -->
+        <section id="result_section" class="container">
+            
+            <!-- show details card start  -->
+            <div id="details_card" style="max-width: 540px; margin-bottom: 10px; border-radius: 10px;" class="mx-auto">
+                
+            </div>
+            <!-- show details card end  -->
+
+            <!-- search result start  -->
+
+            <!-- result error  -->
+            <div id="result_error" style="display: none;">
+                <h1 class="text-danger text-center">No result found</h1>
+            </div>
+
+            <!-- show all search card start  -->
+            <div id="col_wrapper" class="text-center">
+
+                
+                <!-- all search card goes here  -->
+            </div>
+            <!-- show all search card end  -->
+
+        </section>
+        <!-- result section end  -->
+
+
+
+
+
+    </main>
+    
+
+    <!-- bootstrap js bundle  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+    <!-- font awesome js  -->
+    <script src="https://kit.fontawesome.com/f4873ebcd9.js" crossorigin="anonymous"></script>
+
+    <!-- custom js  -->
+    
+    <!-- <script src="sportsdbAPIfetch.js"></script> -->
+    <!-- <script src="openWeatherMapAPIfetch.js"></script> -->
+    <script src="openWeatherMapAPIasync.js"></script>
+</body>
+</html>
